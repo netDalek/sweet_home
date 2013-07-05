@@ -1,5 +1,7 @@
 let mapleader = ","
 
+call janus#disable_plugin('snipmate')
+
 " Поддержка мыши
 set mouse=a
 set mousemodel=popup
@@ -12,11 +14,11 @@ set complete=""
 " Из текущего буфера
 set complete+=.
 " Из словаря
-set complete+=k
+" set complete+=k
 " Из других открытых буферов
 set complete+=b
 " из тегов
-set complete+=t
+" set complete+=t
 
 " сворачивание блоков на основе отступов
 set foldmethod=indent
