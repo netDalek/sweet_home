@@ -24,8 +24,9 @@
     ll = log -10 --pretty=format:\"%h %Cblue%ar %Cgreen%an%Creset: %s %Cred%d\"
     gr = log --graph --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
     where = branch -av --contains
-    resetlast = reset HEAD^
+    uncommit = reset HEAD^
     create-pull-request = !sh -c 'stash pull-request $0'
+  pushc = push origin HEAD
 [core]
     excludesfile = /home/gva/.gitignore
     pager = less -FRSX
