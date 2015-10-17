@@ -5,7 +5,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
 "call vundle#rc(path)
@@ -27,7 +27,19 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'jimenezrick/vimerl'
+Bundle 'edkolev/erlang-motions'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'junegunn/goyo.vim'
+Bundle 'bogado/file-line'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'scrooloose/syntastic'
+" Bundle 'tpope/vim-surround'
+Bundle 'rust-lang/rust.vim'
+
+call vundle#end()     
+
+let g:erlang_force_use_vimerl_indent=1
+let g:syntastic_erlang_checkers = ['syntaxerl']
 
 " Конфиг для вызова ag
 Bundle 'rking/ag.vim'
@@ -38,17 +50,26 @@ cabbrev As AgFromSearch " Псевдоним чтобы меньше писат�
 Bundle 'git://github.com/vim-scripts/vim-auto-save'
 let g:auto_save = 1
 
+" 'colorscheme': 'wombat',
 :let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ }
+
+" syntax enable
+set background=light
+colorscheme solarized
+
 :set laststatus=2
 
-set nowrap
+" set nowrap
+:set linebreak
+
 set hlsearch
 
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+autocmd FileType erlang set softtabstop=4|set shiftwidth=4
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -62,6 +83,10 @@ map <Leader>n :NERDTreeToggle<CR>
 
 set term=xterm-256color
 color smyck
+" set background=dark
+" color solarized
+" syntax enable
+" color monokai
 
 set clipboard=unnamed
 
@@ -83,6 +108,12 @@ set foldlevelstart=20
 set autowrite
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+autocmd BufRead,BufNewFile */nginx/*.conf setfiletype conf
+
+"do not create swp files
+set noswapfile
+set nobackup 
 
 " Комманды в режиме кириллицы
 map ё `
