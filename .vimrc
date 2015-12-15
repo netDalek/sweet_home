@@ -35,6 +35,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 " Bundle 'tpope/vim-surround'
 Bundle 'rust-lang/rust.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 call vundle#end()     
 

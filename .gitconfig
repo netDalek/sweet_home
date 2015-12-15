@@ -28,5 +28,5 @@
     create-pull-request = !sh -c 'stash pull-request $0'
   pushc = push origin HEAD
 [core]
-    excludesfile = /home/gva/.gitignore
+	excludesfile = /Users/denis/.gitignore_global
     pager = less -FRSX
