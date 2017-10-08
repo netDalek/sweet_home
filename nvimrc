@@ -36,6 +36,7 @@ Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 set clipboard+=unnamedplus
+set clipboard+=unnamed
 set ttimeoutlen=0
 
 let g:erlang_force_use_vimerl_indent=1
@@ -47,15 +48,9 @@ cabbrev As AgFromSearch " Псевдоним чтобы меньше писат�
 
 let g:auto_save = 1
 
-
-" 'colorscheme': 'wombat',
-" :let g:lightline = {
-"       \ 'colorscheme': 'solarized',
-"       \ }
-
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme smyck
 
 set expandtab
 set shiftwidth=2
