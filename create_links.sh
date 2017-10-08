@@ -18,3 +18,7 @@ ln -s `pwd`/tmux.conf ~/.tmux.conf
 
 mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim.bak
 ln -s `pwd`/nvimrc ~/.config/nvim/init.vim
+
+ln -s `pwd`/vim_colors ~/.config/nvim/colors
+ln -s `pwd`/vim_colors ~/.vim/colors
+
