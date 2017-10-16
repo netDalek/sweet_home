@@ -28,5 +28,5 @@
     create-pull-request = !sh -c 'stash pull-request $0'
   pushc = push origin HEAD
 [core]
-	excludesfile = /Users/denis/.gitignore_global
+	excludesfile = /home/den/.gitignore_global
     pager = less -FRSX

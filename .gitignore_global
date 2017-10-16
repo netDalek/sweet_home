@@ -2,3 +2,4 @@ cookbooks/
 .vagrant
 my
 erln8.config
+.tool-versions

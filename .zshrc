@@ -81,7 +81,6 @@ alias b='bundle exec'
 alias bs='bundle exec spring'
 alias bsr='bundle exec spring rspec'
 alias delete_merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
-alias tn='~/bin/tn_success-1.4.2.app/Contents/MacOS/terminal-notifier -message finished'
 alias longspec='ruby -e "i = 10; while system(%{rspec}) && i > 0 do i -= 1 end"'
 alias cuc='bundle exec cucumber -r features'
 
