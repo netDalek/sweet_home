@@ -22,3 +22,4 @@ ln -s `pwd`/nvimrc ~/.config/nvim/init.vim
 ln -s `pwd`/vim_colors ~/.config/nvim/colors
 ln -s `pwd`/vim_colors ~/.vim/colors
 
+ln -s `pwd`/bin ~/bin
