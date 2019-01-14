@@ -3,3 +3,8 @@ cookbooks/
 my
 erln8.config
 .tool-versions
+.vscode
+.elixir_ls
+.idea
+a2p_proxy_bundle.iml
+.tool-versions

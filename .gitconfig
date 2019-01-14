@@ -23,10 +23,12 @@
     lf = log --name-status --pretty=format:\"%h %Cblue%ar %Cgreen%an%Creset: %s %Cred%d\"
     ll = log -10 --pretty=format:\"%h %Cblue%ar %Cgreen%an%Creset: %s %Cred%d\"
     gr = log --graph --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
+    sgr = log --graph --simplify-by-decoration --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
     where = branch -av --contains
     uncommit = reset HEAD^
     create-pull-request = !sh -c 'stash pull-request $0'
-  pushc = push origin HEAD
+    branchdate = !git for-each-ref --sort='-authordate' --format='%(refname)%09%(authordate)' refs/heads | sed -e 's-refs/heads/--'
+    pushc = push origin HEAD
 [core]
 	excludesfile = /home/den/.gitignore_global
     pager = less -FRSX

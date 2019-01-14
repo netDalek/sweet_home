@@ -51,16 +51,8 @@ cabbrev As AgFromSearch " Псевдоним чтобы меньше писат�
 Bundle 'git://github.com/vim-scripts/vim-auto-save'
 let g:auto_save = 1
 
-" 'colorscheme': 'wombat',
-:let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
-
-" syntax enable
-set background=light
-colorscheme solarized
-
 :set laststatus=2
+
 
 " set nowrap
 :set linebreak
@@ -84,10 +76,6 @@ map <Leader>n :NERDTreeToggle<CR>
 
 set term=xterm-256color
 color smyck
-" set background=dark
-" color solarized
-" syntax enable
-" color monokai
 
 set clipboard=unnamed
 

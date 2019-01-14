@@ -53,9 +53,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin/"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin/"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -88,9 +88,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export GOPATH="$HOME/gopath/"
-export EDITOR=vim
+export PATH=$PATH:$GOPATH/bin
 
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+export EDITOR=nvim
+
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=~/bin:$PATH
@@ -114,7 +115,10 @@ if [ -d "$GHC_DOT_APP" ]; then
     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+# Java Home
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181.b15-6.fc29.x86_64/jre"
+export PATH=/opt/apache-maven-3.5.0/bin:$PATH
+
 export PGDATA='/usr/local/var/postgres'
 
 alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
@@ -126,14 +130,34 @@ alias diff_finder="/Users/denis/work/git-branches-diff-finder/diff_finder.pl"
 alias gulp=node_modules/gulp/bin/gulp.js
 alias bower=node_modules/bower/bin/bower
 
-# check staging tasks
-alias jtasks="egrep --color -oh '([[:upper:]]+-[[:digit:]]+)' | sort | uniq"
-#. /usr/share/autojump/autojump.zsh
+alias mydocker-kill="docker kill $(docker ps -q)"
+alias mydocker-rm="docker rm $(docker ps -a -q)"
+alias mydocker-rmi="docker rmi $(docker images -q)"
 
-#alias vim="nvim"
+# check staging tasks
+. /usr/share/autojump/autojump.zsh
+
+alias vim="nvim"
 
 export PATH="$HOME/.erln8.d/bin:$PATH"
 export PATH="$HOME/packer:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 alias devbox="cd ~/work/a2p-devbox && vagrant ssh"
-. ~/.zshrc_plus
+#. ~/.zshrc_plus
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+eval $(thefuck --alias) 
+
+fpath=(~/.zsh/completion $fpath)
+
+if [ ${TMUX} ]; then #https://github.com/tmux/tmux/issues/223
+ unset zle_bracketed_paste
+fi
+
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+export ERL_AFLAGS="-kernel shell_history enabled"

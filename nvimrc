@@ -1,36 +1,39 @@
 call plug#begin('~/.vim/plugged')
 
-" Make sure you use single quotes
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 
 Plug 'kien/ctrlp.vim'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
 Plug 'tpope/vim-rails'
-Plug 'squil/vim_colors'
 Plug 'itchyny/lightline.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-commentary'
+Plug 'neoclide/vim-easygit'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'bogado/file-line'
+Plug 'rking/ag.vim'
+Plug 'vim-scripts/vim-auto-save'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-syntastic/syntastic'
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+
+Plug 'ervandew/supertab'
+
+"Langs
+Plug 'elixir-editors/vim-elixir'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
-Plug 'Lokaltog/vim-easymotion'
-Plug 'tpope/vim-commentary'
-Plug 'ddollar/nerdcommenter'
-Plug 'tpope/vim-fugitive'
-Plug 'jeetsukumaran/vim-buffergator'
 Plug 'Blackrush/vim-gocode'
-Plug 'junegunn/goyo.vim'
-Plug 'bogado/file-line'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/syntastic'
-Plug 'jimenezrick/vimerl'
-Plug 'edkolev/erlang-motions'
-Plug 'ervandew/supertab'
-Plug 'rking/ag.vim'
-Plug 'git://github.com/vim-scripts/vim-auto-save'
-
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'wting/rust.vim'
+Plug 'slashmili/alchemist.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -59,7 +62,8 @@ autocmd FileType erlang set softtabstop=4|set shiftwidth=4
 
 :let mapleader = ","
 
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeFind<CR>
+map <Leader>m :NERDTreeToggle<CR>
 
 :syntax on
 
@@ -140,4 +144,3 @@ map Т N
 map Ь M
 map Б <
 map Ю >
-

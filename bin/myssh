@@ -1,7 +1,7 @@
 #!/bin/sh
 if [ -z "$2" ];
 then
-  ssh -t -l dkirichenko $1 "tmux attach || tmux new"
+  ssh -t -l dkirichenko $1 "zsh"
 else
   ssh -t -l dkirichenko $1 "zsh -ic '$2'"
 fi
