@@ -20,6 +20,8 @@ Plug 'vim-scripts/vim-auto-save'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-syntastic/syntastic'
 
+Plug 'kylef/apiblueprint.vim'
+
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 Plug 'vim-erlang/vim-erlang-omnicomplete'
@@ -28,6 +30,7 @@ Plug 'ervandew/supertab'
 
 "Langs
 Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'

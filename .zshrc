@@ -117,6 +117,7 @@ fi
 
 # Java Home
 export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181.b15-6.fc29.x86_64/jre"
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-11.fc29.x86_64/jre"
 export PATH=/opt/apache-maven-3.5.0/bin:$PATH
 
 export PGDATA='/usr/local/var/postgres'
