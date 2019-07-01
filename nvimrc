@@ -56,7 +56,7 @@ let g:auto_save = 1
 
 syntax enable
 set background=dark
-colorscheme smyck
+" colorscheme smyck
 
 set expandtab
 set shiftwidth=2
