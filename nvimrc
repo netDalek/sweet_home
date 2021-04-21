@@ -7,7 +7,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'itchyny/lightline.vim'
 Plug 'Lokaltog/vim-easymotion'
@@ -27,16 +27,26 @@ set omnifunc=syntaxcomplete#Complete
 Plug 'vim-erlang/vim-erlang-omnicomplete'
 
 Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 "Langs
-Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'Blackrush/vim-gocode'
 Plug 'wting/rust.vim'
+Plug 'udalov/kotlin-vim'
+
+"Syntax
+Plug 'https://github.com/slim-template/vim-slim.git'
+
+"Elixir
+Plug 'elixir-editors/vim-elixir'
+" Plug 'dm1try/ilexir'
 Plug 'slashmili/alchemist.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
 
 " Add plugins to &runtimepath
 call plug#end()

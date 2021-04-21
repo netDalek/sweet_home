@@ -32,3 +32,5 @@
 [core]
 	excludesfile = /home/den/.gitignore_global
     pager = less -FRSX
+[http "https://pkg.re"]
+	followRedirects = true

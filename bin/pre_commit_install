@@ -1,0 +1,3 @@
+#!/bin/sh
+wget https://bb.funbox.ru/projects/UTILS/repos/funbox-hooks/raw/.pre-commit-config.yaml\?at\=refs%2Fheads%2Fmaster -O .pre-commit-config.yaml
+pre-commit install -t commit-msg

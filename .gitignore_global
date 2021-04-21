@@ -2,7 +2,6 @@ cookbooks/
 .vagrant
 my
 erln8.config
-.tool-versions
 .vscode
 .elixir_ls
 .idea

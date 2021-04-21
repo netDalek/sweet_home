@@ -16,9 +16,11 @@ ln -s `pwd`/.vimrc ~/.vimrc
 mv ~/.tmux.conf ~/.tmux.conf.bak
 ln -s `pwd`/tmux.conf ~/.tmux.conf
 
+mkdir -p ~/.config/nvim
 mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim.bak
 ln -s `pwd`/nvimrc ~/.config/nvim/init.vim
 
+mkdir -p ~/.config/nvim/colors
 ln -s `pwd`/vim_colors/smyck.vim ~/.config/nvim/colors
 ln -s `pwd`/vim_colors/smyck.vim ~/.vim/colors
 
